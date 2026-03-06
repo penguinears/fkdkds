@@ -1,0 +1,94 @@
+<body style="font-family: Arial, sans-serif; margin: 0; color: #111;">
+
+<div style="max-width: 900px; margin: 60px auto; padding: 0 20px;">
+
+<h1 style="font-size: 2.8rem; margin-bottom: 10px;">Leon Bastien Gullick</h1>
+
+<div style="margin-bottom: 40px;">
+<h2 id="ageCounter" style="margin: 0; font-size: 1.4rem;"></h2>
+<h3 id="lifeLeftCounter" style="margin-top: 5px; font-size: 1.2rem;"></h3>
+</div>
+<p>______________________________________________________________</p>
+<h2 style="margin-bottom:15px;">Projects</h2>
+<h3 style="margin-bottom:10px;">Go to Rabdom Project:</h3>
+
+<button onclick="surpriseMe()" style="padding:12px 22px; font-size:1rem; cursor:pointer; margin-bottom:40px;">
+Surprise Me
+</button>
+
+
+<h3 style="margin-bottom:10px;">My HTML Projects:</h3>
+
+<div style="line-height:2; margin-bottom:40px;">
+<p><a href=https://dollarstocents.oneapp.dev/ target=_blank>Dollars to Cents</a></p>
+<p><a href=https://doodlethisdoodlethat.vercel.app/ target=_blank>Doodle This Doodle That</a></p>
+<p><a href=https://chickenburgergames.vercel.app/ target=_blank>Iggle (Unblocked Games)</a></p>
+<p><a href=https://socialcreditsocialmedia.vercel.app target=_blank>Social Credit Project</a></p>
+<p><a href=https://fpstest.vercel.app/ target=_blank>FPS Test Website</a></p>
+<p><a href=https://leosblackjackcasino.oneapp.dev/ target=_blank>Blackjack Game</a></p>
+<p><a href=https://iloveimagecompression.oneapp.dev/ target=_blank>I Love Image Compression</a></p>
+<p><a href=https://pilingo.oneapp.dev/ target=_blank>Pilingo</a></p>
+<p><a href=https://2playergaemofpong.oneapp.dev/ target=_blank>2 Player Game of Pong</a></p>
+<p><a href=https://tiktaktoe.oneapp.dev/ target=_blank>Tic Tac Toe</a></p>
+<p><a href=https://tttonline.oneapp.dev/ target=_blank>Tic Tac Toe 2</a></p>
+<p><a href=https://votezoe.oneapp.dev/ target=_blank>Campaign Website</a></p>
+<p><a href=https://worldwidewhiteboard.oneapp.dev/ target=_blank>World Wide Whiteboard</a></p>
+</div>
+
+<h3>My Python Projects</h3>
+<p style="margin-bottom:40px;">Currently in development.</p>
+<p>_____________________________________________________________________________</p>
+
+<h2>Outside of Coding</h2>
+<p style="margin-bottom:40px;">I play junior ice hockey and ski in sunderland.</p>
+
+<h2>Goals</h2>
+<p>I want to become a software developer or work in cybersecurity.</p>
+<p>Currently completing FreeCodeCamp’s full stack course.</p>
+
+</div>
+
+<script>
+const birthDate = new Date("2011-04-02T12:30:00");
+const lifeExpectancyYears = 78.0;
+
+function updateCounters() {
+    const now = new Date();
+    const ageMs = now - birthDate;
+    const years = ageMs / (1000 * 60 * 60 * 24 * 365.2425);
+    const yearsLeft = lifeExpectancyYears - years;
+
+    document.getElementById("ageCounter").textContent =
+        "Age: " + years.toFixed(12) + " years";
+
+    document.getElementById("lifeLeftCounter").textContent =
+        "Estimated years left: " + yearsLeft.toFixed(12);
+
+    requestAnimationFrame(updateCounters);
+}
+
+requestAnimationFrame(updateCounters);
+
+function surpriseMe() {
+    const sites = [
+        "https://dollarstocents.oneapp.dev/",
+        "https://doodlethisdoodlethat.vercel.app/",
+        "https://chickenburgergames.vercel.app/",
+        "https://socialcreditsocialmedia.vercel.app",
+        "https://fpstest.vercel.app/",
+        "https://leosblackjackcasino.oneapp.dev/",
+        "https://iloveimagecompression.oneapp.dev/",
+        "https://pilingo.oneapp.dev/",
+        "https://2playergaemofpong.oneapp.dev/",
+        "https://tiktaktoe.oneapp.dev/",
+        "https://tttonline.oneapp.dev/",
+        "https://votezoe.oneapp.dev/",
+        "https://worldwidewhiteboard.oneapp.dev/"
+    ];
+
+    const randomSite = sites[Math.floor(Math.random() * sites.length)];
+    window.open(randomSite, "_blank");
+}
+</script>
+
+</body>
